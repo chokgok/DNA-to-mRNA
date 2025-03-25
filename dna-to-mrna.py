@@ -14,12 +14,7 @@ def transcribe(dna):
     return mRNA
 
 def codons(rna):
-    mRNA_codons = ""
-    for n in range(len(rna)):
-        if n % 3 == 0 and n != 0:
-            mRNA_codons = mRNA_codons + " "
-        mRNA_codons = mRNA_codons + rna[n]
-    return mRNA_codons
+    return ' '.join(rna[i:i+3] for i in range(0, len(rna), 3))
 
 def main():
     print(f"mRNA sequence: {codons(transcribe(input("Enter DNA sequence: ")))}")
