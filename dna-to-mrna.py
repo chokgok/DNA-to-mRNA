@@ -24,8 +24,5 @@ def codons(rna):
 def main():
     print(f"mRNA sequence: {codons(transcribe(input("Enter DNA sequence: ")))}")
 
-# GAGCTATTCCATGGA
-# GAG CTA TTC CAT GGA
-
 if __name__ == "__main__":
     main()
